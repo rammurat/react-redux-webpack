@@ -6,16 +6,13 @@ import { updateSortType, updateProductType } from '../actions/psp.js';
 class Filters extends Component {
   constructor(props) {
     super(props);
-
-    this.onSortTypeChange = this.onSortTypeChange.bind(this);
-    this.onPropertyTypeChange = this.onPropertyTypeChange.bind(this);
   }
 
-  onSortTypeChange(e) {
+  onSortTypeChange = (e) => {
     this.props.updateSortType(e.target.value)
   }
 
-  onPropertyTypeChange(e) {
+  onPropertyTypeChange = (e) => {
     this.props.updateProductType(e.target.value)
   }
 
